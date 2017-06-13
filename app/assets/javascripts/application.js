@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= pokClickHandler.js
+//= pokClickHandler
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
