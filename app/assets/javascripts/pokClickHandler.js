@@ -16,15 +16,20 @@ $(document).ready(function() {
             if (clickCounter === 2) {
                 pokImgs.push($(this).attr('data-pokemon'));
 
-                if (player1) {
-                    player1 = false;
-                } else {
+                if (!player1) {
+                    let score = $('.player2');
+                    if (correctPair(pokImgs[2], pokImgs[1], score)) {
+                        alert('Pair!');
+                        imgTagFinder(pokImgs);
+                    };
                     player1 = true;
-                };
-
-                if (correctPair(pokImgs[2], pokImgs[1])) {
-                    alert('Pair!');
-                    imgTagFinder(pokImgs);
+                } else {
+                    let score = $('.player1');
+                    if (correctPair(pokImgs[2], pokImgs[1], score)) {
+                        alert('Pair!');
+                        imgTagFinder(pokImgs);
+                    };
+                    player1 = false;
                 };
 
                 $('.pok_img').off('click');
@@ -42,8 +47,11 @@ $(document).ready(function() {
     }
 
 
-    function correctPair(img1, img2) {
+    function correctPair(img1, img2,score) {
+        let count = parseInt( score.text() ) + 1;
+        
         if (img1 === img2) {
+            score.text(count);
             return true;
         };
     };
