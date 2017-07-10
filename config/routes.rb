@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  get '/' => 'pokemon#index'
+  get '/' => 'games#new'
+  resources :games
 end

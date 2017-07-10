@@ -1,6 +1,7 @@
 $(document).ready(function() {
     let pokImgs = [undefined];
     let clickCounter = 0;
+    let player1 = true;
 
     $('.pok_img').on('click', clickHandler);
 
@@ -14,6 +15,12 @@ $(document).ready(function() {
 
             if (clickCounter === 2) {
                 pokImgs.push($(this).attr('data-pokemon'));
+
+                if (player1) {
+                    player1 = false;
+                } else {
+                    player1 = true;
+                };
 
                 if (correctPair(pokImgs[2], pokImgs[1])) {
                     alert('Pair!');
