@@ -12,6 +12,10 @@
 //
 //= require jquery
 //= pokClickHandler
+//= require bootstrap.min
+//= require mdb.min
+//= require jquery.min
+//= require tether
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .

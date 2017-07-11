@@ -1,3 +1,39 @@
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+
+/* Navigation*/
+
+.navbar {
+    background-color: transparent;
+}
+
+.top-nav-collapse {
+    background-color: #2E2E2E;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #2E2E2E;
+    }
+}
+
+.full-bg-img {
+    color: #fff;
+}
+
+.view {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .left {
     width: 1000px;
     margin-left: 200px;
@@ -14,12 +50,12 @@
 }
 
 .player2div {
-  margin-top: -100px;
-  margin-left: 1300px;
+    margin-top: -100px;
+    margin-left: 1300px;
 }
 
 .player1div {
-  margin-top: -15px;
+    margin-top: -15px;
 }
 
 button {
