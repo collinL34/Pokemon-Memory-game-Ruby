@@ -1,5 +1,6 @@
 $(document).ready(function() {
     let pokImgs = [undefined];
+    let allImgs = [];
     let clickCounter = 0;
     let player1 = true;
 
@@ -20,6 +21,9 @@ $(document).ready(function() {
                     let score = $('.player2');
                     if (correctPair(pokImgs[2], pokImgs[1], score)) {
                         alert('Pair!');
+                        allImgs.push(pokImgs[1]);
+                        allImgs.push(pokImgs[2]);
+
                         imgTagFinder(pokImgs);
                     };
                     player1 = true;
@@ -27,9 +31,24 @@ $(document).ready(function() {
                     let score = $('.player1');
                     if (correctPair(pokImgs[2], pokImgs[1], score)) {
                         alert('Pair!');
+                        allImgs.push(pokImgs[1]);
+                        allImgs.push(pokImgs[2]);
+
                         imgTagFinder(pokImgs);
                     };
                     player1 = false;
+                };
+
+                if (allImgs.length === 18) {
+                    $('body').append("<button class='new-game'>New Game</button>");
+                    let p1 = parseInt($('.player1').text());
+                    let p2 = parseInt($('.player2').text());
+
+                    if (p1 > p2) {
+                        alert('Game Over Player One wins!');
+                    } else {
+                        alert('Game Over Player Two wins!');
+                    };
                 };
 
                 $('.pok_img').off('click');
@@ -40,6 +59,7 @@ $(document).ready(function() {
                     pokImgs = [undefined];
                     $('.pok_img').on('click', clickHandler);
                 }, 1000)
+                console.log(allImgs);
             };
 
 
@@ -47,9 +67,9 @@ $(document).ready(function() {
     }
 
 
-    function correctPair(img1, img2,score) {
-        let count = parseInt( score.text() ) + 1;
-        
+    function correctPair(img1, img2, score) {
+        let count = parseInt(score.text()) + 1;
+
         if (img1 === img2) {
             score.text(count);
             return true;
@@ -66,5 +86,9 @@ $(document).ready(function() {
         });
     };
 
+
+    $('.new-game').on('click', e => {
+        window.location.href = "http://localhost:3000/games/new";
+    });
 
 });
