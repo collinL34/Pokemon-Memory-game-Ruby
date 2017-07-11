@@ -40,7 +40,7 @@ $(document).ready(function() {
                 };
 
                 if (allImgs.length === 18) {
-                    $('body').append("<button class='new-game'>New Game</button>");
+                    $('.new-game-div').append("<button class='new-game'>New Game</button>");
                     let p1 = parseInt($('.player1').text());
                     let p2 = parseInt($('.player2').text());
 
@@ -87,7 +87,7 @@ $(document).ready(function() {
     };
 
 
-    $('.new-game').on('click', e => {
+    $('.new-game-div').on('click', e => {
         window.location.href = "http://localhost:3000/games/new";
     });
 
