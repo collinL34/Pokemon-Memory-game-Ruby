@@ -20,23 +20,23 @@ $(document).ready(function() {
                 if (!player1) {
                     let score = $('.player2');
                     if (correctPair(pokImgs[2], pokImgs[1], score)) {
-                        alert('Pair!');
                         allImgs.push(pokImgs[1]);
                         allImgs.push(pokImgs[2]);
 
                         imgTagFinder(pokImgs);
+                    } else {
+                        player1 = true;
                     };
-                    player1 = true;
                 } else {
                     let score = $('.player1');
                     if (correctPair(pokImgs[2], pokImgs[1], score)) {
-                        alert('Pair!');
                         allImgs.push(pokImgs[1]);
                         allImgs.push(pokImgs[2]);
 
                         imgTagFinder(pokImgs);
+                    } else {
+                        player1 = false;
                     };
-                    player1 = false;
                 };
 
                 if (allImgs.length === 18) {
