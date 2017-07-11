@@ -1,5 +1,12 @@
-<h2> Player One: <h2 class="player1"><%= @game.player_one_score%></h2> </h2>
-<h2> Player Two: <h2 class="player2"><%= @game.player_two_score%></h2> </h2>
+<div class="player1div">
+    <h2>Player1:</h2>
+    <h2 class="player1"><%= @game.player_one_score%></h2> 
+</div>
+
+<div class="player2div">
+    <h2>Player2:</h2>
+    <h2 class="player2"><%= @game.player_two_score%></h2> 
+</div>
 
 <div class="left">
     <img class='pok_img' src="https://opengameart.org/sites/default/files/card%20back%20red.png" style="height: 200px; width: 150px;" data-pokemon="<%= @pokemon[0].image_url%>" data-indx="0">
@@ -11,7 +18,6 @@
     <img class='pok_img' src="https://opengameart.org/sites/default/files/card%20back%20red.png" style="height: 200px; width: 150px;" data-pokemon="<%= @pokemon[6].image_url%>" data-indx="6">
     <img class='pok_img' src="https://opengameart.org/sites/default/files/card%20back%20red.png" style="height: 200px; width: 150px;" data-pokemon="<%= @pokemon[7].image_url%>" data-indx="7">
     <img class='pok_img' src="https://opengameart.org/sites/default/files/card%20back%20red.png" style="height: 200px; width: 150px;" data-pokemon="<%= @pokemon[8].image_url%>" data-indx="8">
-    <img class='pok_img' src="https://opengameart.org/sites/default/files/card%20back%20red.png" style="height: 200px; width: 150px;" data-pokemon="<%= @pokemon[9].image_url%>" data-indx="9">
     <img class='pok_img' src="https://opengameart.org/sites/default/files/card%20back%20red.png" style="height: 200px; width: 150px;" data-pokemon="<%= @pokemon_clone[0].image_url%>" data-indx="10">
     <img class='pok_img' src="https://opengameart.org/sites/default/files/card%20back%20red.png" style="height: 200px; width: 150px;" data-pokemon="<%= @pokemon_clone[1].image_url%>" data-indx="11">
     <img class='pok_img' src="https://opengameart.org/sites/default/files/card%20back%20red.png" style="height: 200px; width: 150px;" data-pokemon="<%= @pokemon_clone[2].image_url%>" data-indx="12">
@@ -21,5 +27,4 @@
     <img class='pok_img' src="https://opengameart.org/sites/default/files/card%20back%20red.png" style="height: 200px; width: 150px;" data-pokemon="<%= @pokemon_clone[6].image_url%>" data-indx="16">
     <img class='pok_img' src="https://opengameart.org/sites/default/files/card%20back%20red.png" style="height: 200px; width: 150px;" data-pokemon="<%= @pokemon_clone[7].image_url%>" data-indx="17">
     <img class='pok_img' src="https://opengameart.org/sites/default/files/card%20back%20red.png" style="height: 200px; width: 150px;" data-pokemon="<%= @pokemon_clone[8].image_url%>" data-indx="18">
-    <img class='pok_img' src="https://opengameart.org/sites/default/files/card%20back%20red.png" style="height: 200px; width: 150px;" data-pokemon="<%= @pokemon_clone[9].image_url%>" data-indx="19">
 </div>

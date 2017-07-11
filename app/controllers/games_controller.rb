@@ -3,7 +3,7 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
     @pokemons = Pokemon.all.shuffle()
-    @pokemon = @pokemons[(0..9)]
+    @pokemon = @pokemons[(0..8)]
     @pokemon_clone = @pokemon.shuffle
   end
 
